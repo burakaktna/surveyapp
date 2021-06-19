@@ -6,33 +6,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Twitter -->
-    <meta name="twitter:site" content="@themepixels">
-    <meta name="twitter:creator" content="@themepixels">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="DashForge">
-    <meta name="twitter:description" content="Responsive Bootstrap 4 Dashboard Template">
-    <meta name="twitter:image" content="http://themepixels.me/dashforge/img/dashforge-social.png">
-
-    <!-- Facebook -->
-    <meta property="og:url" content="http://themepixels.me/dashforge">
-    <meta property="og:title" content="DashForge">
-    <meta property="og:description" content="Responsive Bootstrap 4 Dashboard Template">
-
-    <meta property="og:image" content="http://themepixels.me/dashforge/img/dashforge-social.png">
-    <meta property="og:image:secure_url" content="http://themepixels.me/dashforge/img/dashforge-social.png">
-    <meta property="og:image:type" content="image/png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="600">
-
     <!-- Meta -->
-    <meta name="description" content="Responsive Bootstrap 4 Dashboard Template">
-    <meta name="author" content="ThemePixels">
+    <meta name="description" content="Ümit SARIGÖL Anket Çalışması">
+    <meta name="author" content="LeafletSoft">
 
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/img/favicon.png') }}">
 
-    <title>DashForge Responsive Bootstrap 4 Dashboard Template</title>
+    <title>Ümit SARIGÖL Anket Çalışması</title>
 
     <!-- vendor css -->
     <link href="{{ asset('lib/@fortawesome/fontawesome-free/css/all.min.css') }}" rel="stylesheet">
@@ -58,6 +39,7 @@
                     deleniti eius error exercitationem facere, hic maxime modi molestias neque nesciunt nisi obcaecati
                     provident
                     quasi recusandae tenetur vel voluptatum?</p>
+                <span class="badge badge-warning tx-20 mt-0">Tüm sorular yanıtlanmazsa hata ekranı görürsünüz.</span>
             </div>
             <div class="col-6" id="adDiv" style="display: none">
                 <img class="img-fluid float-right" style="max-width: 600px; max-height: 400px; display: none" id="adImg"

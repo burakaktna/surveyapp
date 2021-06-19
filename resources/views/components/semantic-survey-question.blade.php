@@ -11,7 +11,6 @@
                         <input class="form-check-input" id="semantic_question_{{$question->id }}"
                                type="radio"
                                required
-                               @if($i === 1) checked @endif
                                name="semantic_{{$question->id }}" value="{{ $i }}"/>
                         <label class="form-check-label"
                                for="semantic_question_{{$question->id }}">{{ $i }}</label>

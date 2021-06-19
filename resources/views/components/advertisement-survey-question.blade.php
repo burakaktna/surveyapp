@@ -11,7 +11,6 @@
                         <input class="form-check-input" id="advertisement_question_{{$question->id }}"
                                type="radio"
                                required
-                               @if($i === 1) checked @endif
                                name="advertisement_{{$question->id }}" value="{{ $i }}"/>
                         <label class="form-check-label"
                                for="advertisement_question_{{$question->id }}">{{ $i }}</label>

@@ -18,7 +18,6 @@
                 <input class="form-control-input" id="likert_question_{{ $question->id }}"
                        type="radio"
                        required
-                       checked
                        name="likert_{{ $question->id }}" value="6"/>
                 <label class="form-control-label"
                        for="likert_question_{{ $question->id }}"></label>

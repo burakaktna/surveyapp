@@ -38,7 +38,8 @@ class SurveyController extends Controller
             $questionPoint = $request->get('semantic_' . $semanticSurveyQuestion->id);
             $questionPoints->push($questionPoint);
             if (is_null($questionPoint)) {
-                abort('500', 'Sistemde bir hata oluştu. Yönetici ile iletişime geçip 618 kodunu paylaşın.');
+                $participant->delete();
+                abort('500', 'Sistemde bir hata oluştu. Eğer tüm soruları yanıtladıysanız yönetici ile iletişime geçip 618 kodunu paylaşın.');
             }
             $semanticSurveyQuestion->answers()->create([
                 'participant_id' => $participant->id,
@@ -59,7 +60,8 @@ class SurveyController extends Controller
             $questionPoint = $request->get('likert_' . $likertSurveyQuestion->id);
             $questionPoints->push($questionPoint);
             if (is_null($questionPoint)) {
-                abort('500', 'Sistemde bir hata oluştu. Yönetici ile iletişime geçip 816 kodunu paylaşın.');
+                $participant->delete();
+                abort('500', 'Sistemde bir hata oluştu. Eğer tüm soruları yanıtladıysanız yönetici  ile iletişime geçip 816 kodunu paylaşın.');
             }
             $likertSurveyQuestion->answers()->create([
                 'participant_id' => $participant->id,
@@ -80,7 +82,8 @@ class SurveyController extends Controller
             $questionPoint = $request->get('advertisement_' . $advertisementSurveyQuestion->id);
             $questionPoints->push($questionPoint);
             if (is_null($questionPoint)) {
-                abort('500', 'Sistemde bir hata oluştu. Yönetici ile iletişime geçip 912 kodunu paylaşın.');
+                $participant->delete();
+                abort('500', 'Sistemde bir hata oluştu. Eğer tüm soruları yanıtladıysanız yönetici ile iletişime geçip 912 kodunu paylaşın.');
             }
             $advertisementSurveyQuestion->answers()->create([
                 'participant_id' => $participant->id,
