@@ -12,7 +12,7 @@ Class CreateFactorQuestionsTable extends Migration {
 
             $table->foreignId('factor_id')->constrained()->cascadeOnDelete();
 
-            $table->morphs('questionable');
+            $table->foreignId('likert_survey_question_id')->constrained()->cascadeOnDelete();
 
             $table->softDeletes();
             $table->timestamps();

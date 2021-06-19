@@ -8,12 +8,13 @@
             <div class="col-xl-8 d-flex justify-content-center">
                 @for($i = 7; $i>=1; $i--)
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" id="semantic-question-{{$question->id }}"
+                        <input class="form-check-input" id="semantic_question_{{$question->id }}"
                                type="radio"
                                required
-                               name="semantic-question-{{$question->id }}" value="{{ $i }}"/>
+                               @if($i === 7) checked @endif
+                               name="semantic_{{$question->id }}" value="{{ $i }}"/>
                         <label class="form-check-label"
-                               for="semantic-question-{{$question->id }}">{{ $i }}</label>
+                               for="semantic_question_{{$question->id }}">{{ $i }}</label>
                     </div>
                 @endfor
             </div>

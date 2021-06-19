@@ -11,8 +11,9 @@ class CreateSurveysTable extends Migration
         Schema::create('surveys', function (Blueprint $table) {
             $table->bigIncrements('id');
 
-            $table->string('name');
-            $table->enum('type', ['likert', 'semantic']);
+            $table->string('question');
+            $table->enum('type', ['likert', 'semantic', 'advertisement'])->unique();
+            // bu highlimit dinamik tutulup frontendde bu limite göre high low diye etiketlenebilir.
             $table->integer('high_limit');
 
             $table->softDeletes();

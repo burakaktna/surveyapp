@@ -1,19 +1,20 @@
-<div class="tab-pane active px-sm-3 px-md-5" role="tabpanel"
-     aria-labelledby="bootstrap-wizard-validation-tab1"
-     id="bootstrap-wizard-validation-tab1">
-    <h4>{{ $semanticSurvey->name }}</h4>
-    <hr>
+<div class="row row-sm">
+
     @foreach($semanticSurveyQuestions->all() as $question)
         @switch($question->is_reversed)
             @case(true)
-            <x-semantic-survey-reversed-question
-                :question="$question"
-            />
+            <div class="col-md-12">
+                <x-semantic-survey-reversed-question
+                    :question="$question"
+                />
+            </div>
             @break
             @case(false)
-            <x-semantic-survey-question
-                :question="$question"
-            />
+            <div class="col-md-12">
+                <x-semantic-survey-question
+                    :question="$question"
+                />
+            </div>
             @break
         @endswitch
         <hr>

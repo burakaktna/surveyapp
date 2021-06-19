@@ -1,6 +1,7 @@
 <?php
 
-use Illuminate\Http\Request;
+use App\Http\Controllers\AdvertisementController;
+use App\Http\Controllers\SurveyController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,6 +15,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::get('get-random-advertisement', [AdvertisementController::class, 'getRandomAdvertisement']);
+Route::post('store-survey', [SurveyController::class, 'store'])->name('store_survey');

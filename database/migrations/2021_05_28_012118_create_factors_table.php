@@ -10,7 +10,6 @@ Class CreateFactorsTable extends Migration {
         Schema::create('factors', function (Blueprint $table) {
             $table->bigIncrements('id');
 
-            $table->boolean('is_important')->default(false);
             $table->string('name');
 
             $table->softDeletes();

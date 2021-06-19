@@ -9,12 +9,17 @@ class Survey extends Model
 {
     public function semanticSurveyQuestions(): HasMany
     {
-        return $this->hasMany(SemanticSurveyQuestion::class, 'id', 'semantic_survey_id');
+        return $this->hasMany(SemanticSurveyQuestion::class, 'semantic_survey_id', 'id');
     }
 
     public function likertSurveyQuestions(): HasMany
     {
-        return $this->hasMany(LikertSurveyQuestion::class, 'id', 'likert_survey_id');
+        return $this->hasMany(LikertSurveyQuestion::class, 'likert_survey_id', 'id');
+    }
+
+    public function advertisementSurveyQuestions(): HasMany
+    {
+        return $this->hasMany(AdvertisementSurveyQuestion::class, 'advertisement_survey_id', 'id');
     }
 
     public function results(): HasMany

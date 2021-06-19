@@ -10,6 +10,8 @@ class QuestionAnswer extends Model
 {
     use SoftDeletes;
 
+    protected $fillable = ['participant_id', 'point'];
+
     public function questionable(): MorphTo
     {
         return $this->morphTo();

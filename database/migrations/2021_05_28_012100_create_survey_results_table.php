@@ -10,8 +10,10 @@ Class CreateSurveyResultsTable extends Migration {
         Schema::create('survey_results', function (Blueprint $table) {
             $table->bigIncrements('id');
 
+            $table->foreignId('participant_id')->constrained()->cascadeOnDelete();
+
             $table->foreignId('survey_id')->constrained()->cascadeOnDelete();
-            $table->enum('tag', ['high', 'low']);
+            $table->double('average_point', 1, 3);
 
             $table->softDeletes();
             $table->timestamps();

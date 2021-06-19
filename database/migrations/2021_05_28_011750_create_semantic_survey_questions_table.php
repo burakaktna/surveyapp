@@ -16,7 +16,6 @@ class CreateSemanticSurveyQuestionsTable extends Migration
             $table->string('question_begin');
             $table->string('question_end');
             $table->boolean('is_reversed');
-            $table->boolean('is_advertisement_survey');
 
             $table->softDeletes();
             $table->timestamps();

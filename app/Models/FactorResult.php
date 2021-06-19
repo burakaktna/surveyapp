@@ -6,9 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class FactorResults extends Model
+class FactorResult extends Model
 {
     use SoftDeletes;
+
+    protected $fillable = ['factor_id', 'average_point'];
 
     public function factor(): BelongsTo
     {

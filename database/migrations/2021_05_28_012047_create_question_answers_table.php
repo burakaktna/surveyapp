@@ -10,6 +10,8 @@ Class CreateQuestionAnswersTable extends Migration {
         Schema::create('question_answers', function (Blueprint $table) {
             $table->bigIncrements('id');
 
+            $table->foreignId('participant_id')->constrained()->cascadeOnDelete();
+
             $table->morphs('questionable');
             $table->integer('point');
 
@@ -18,7 +20,7 @@ Class CreateQuestionAnswersTable extends Migration {
         });
     }
 
-    public function down()
+    public function down(): void
     {
         Schema::dropIfExists('question_answers');
     }
