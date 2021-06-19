@@ -14,13 +14,13 @@ class CreateFactorResultsTable extends Migration
             $table->foreignId('participant_id')->constrained()->cascadeOnDelete();
 
             $table->foreignId('factor_id')->constrained()->cascadeOnDelete();
-            $table->double('average_point', 1, 3);
+            $table->double('average_point', 3, 2);
 
             $table->timestamps();
         });
     }
 
-    public function down()
+    public function down(): void
     {
         Schema::dropIfExists('factor_answers');
     }
