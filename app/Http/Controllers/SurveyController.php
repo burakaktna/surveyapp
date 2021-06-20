@@ -28,7 +28,7 @@ class SurveyController extends Controller
 
         CalculateFactorResultsJob::dispatch($participant);
 
-        return 'katılımınız için teşekkürler';
+        return redirect()->route('thank_you');
     }
 
     private function storeSemanticQuestionAnswers(Request $request, Participant $participant): void

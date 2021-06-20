@@ -31,53 +31,11 @@
 
 <div class="content mt-1">
     <div class="container">
-        <h1 class="df-title">SurveyApp</h1>
-        <div class="row mb-2">
-            <div class="col-12" id="survey-desc">
-                <p class="df-lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium consectetur
-                    corporis
-                    deleniti eius error exercitationem facere, hic maxime modi molestias neque nesciunt nisi obcaecati
-                    provident
-                    quasi recusandae tenetur vel voluptatum?</p>
-                <span class="badge badge-warning tx-20 mt-0">Tüm sorular yanıtlanmazsa hata ekranı görürsünüz.</span>
+        <div class="container ht-100p">
+            <div class="ht-100p d-flex flex-column align-items-center justify-content-center">
+                <h4 class="tx-20 tx-sm-24">Katılımınız İçin Teşekkür Ederiz!</h4>
             </div>
-            <div class="col-6" id="adDiv" style="display: none">
-                <img class="img-fluid float-right" style="max-width: 600px; max-height: 400px; display: none" id="adImg"
-                     alt="Reklam" src="">
-            </div>
-        </div>
-
-
-        <div class="mg-b-25">
-            <form id="surveyForm" action="{{ route('store_survey') }}" method="post">
-                <input type="hidden" name="seen_ad" id="seenAd">
-                <div id="survey-wizard">
-                    <h3>{{ \App\Models\Survey::whereType('semantic')->firstOrFail()->question }}</h3>
-                    <section>
-                        <p class="mg-b-20">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur
-                            corporis
-                            cum cumque distinctio doloribus esse, eum excepturi id impedit maxime obcaecati porro quasi
-                            reiciendis repellat reprehenderit repudiandae suscipit vero voluptatibus.</p>
-
-                        <x-semantic-survey-component/>
-                    </section>
-                    <h3>{{ \App\Models\Survey::whereType('likert')->firstOrFail()->question }}</h3>
-                    <section>
-                        <p class="mg-b-20">Wonderful transition effects.</p>
-                        <x-likert-survey-component/>
-                    </section>
-                    <h3>{{ \App\Models\Survey::whereType('advertisement')->firstOrFail()->question }}</h3>
-                    <section>
-                        <p class="mg-b-20">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur
-                            corporis
-                            cum cumque distinctio doloribus esse, eum excepturi id impedit maxime obcaecati porro quasi
-                            reiciendis repellat reprehenderit repudiandae suscipit vero voluptatibus.</p>
-
-                        <x-advertisement-survey-component/>
-                    </section>
-                </div>
-            </form>
-        </div><!-- df-example -->
+        </div><!-- container -->
 
         @include('includes.footer')
 
